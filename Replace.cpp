@@ -3,18 +3,23 @@ using namespace std;
 int main()
 {
     string s;
-    getline(cin, s);
-    int len = s.size();
+    cin >> s;
+    // int pos=s.find("EGYPT");
 
-    for(int i=0; i<len; i++)
+    while (1)
     {
-        if(s[i]=='EGYPT')
+        int pos = s.find("EGYPT");
+
+        if (pos !=-1)
         {
-            
+            s.replace(pos, 5, " ");
         }
-        
+        else
+        {
+            break;
+        }
     }
-    
+    cout << s;
 
     return 0;
 }
